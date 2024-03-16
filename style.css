@@ -1,0 +1,359 @@
+body{
+    font-family: 'Caveat', cursive;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+a{
+    text-decoration: none;
+    padding-right: 1rem;
+    padding: 3rem;
+}
+a:visited {
+    background-image: linear-gradient(to right, #f00,orange, green, #00f);
+    /* background-clip: text;  */
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+}
+a:hover {
+    background-image: linear-gradient(to right, #f00,orange, green, #00f);
+    /* background-clip: text;  */
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+a:active {
+    color: rgb(219, 88, 22);
+}
+
+.underbar{
+  width: 0;
+  height: 5px;
+  background: rgba(100,100,200,0);
+  -webkit-transition: 1s ease;
+}
+
+li{
+    -webkit-transition: 1s ease;
+
+  &:hover{
+    text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,0.8),0 -4px 15px rgba(255,255,255,0.5);
+  }
+  &:nth-of-type(1):hover ~ .underbar{
+    left: 0;
+    width: 40px;
+    background: rgba(100,100,200,1);
+  }
+  &:nth-of-type(2):hover ~ .underbar{
+    left: 50px;
+    width: 40px;
+    background: rgba(200,100,100,1);
+  }
+  &:nth-of-type(3):hover ~ .underbar{
+    left: 100px;
+    width: 40px;
+    height: 1px;
+    background: rgba(150,250,250,0.5);
+    box-shadow: 0 0 10px rgba(70,250,250,1);
+  }
+  &:nth-of-type(4):hover ~ .underbar{
+    left: 150px;
+    width: 50px;
+    height: 1px;
+    background: rgba(150,250,250,0.5);
+    box-shadow: 0 0 10px rgba(70,250,250,1);
+  }
+  cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+.header-colorFlipper{
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    /* background-clip: text;  */
+    -webkit-background-clip: text;
+    color: black;
+    font-size: 3rem;
+    font-family: 'Caveat', cursive;
+    font-weight: 900;
+}
+
+.container{
+  margin-top: 5rem;
+}
+
+.nav-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+.nav-links{
+    display: flex;
+    background-image: linear-gradient(90deg, #f00,orange,hsl(60, 100%, 50%), green,teal, #00f);
+    /* background-clip: text;  */
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+}
+
+h2{
+    text-align: center;
+    align-content: center;
+}
+
+.button {
+  padding: 0.6em 2.5em;
+  margin-top: 1.5rem;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'Caveat', cursive;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.color_details{
+  position: absolute;
+  top: 360px;
+  left: 760px;
+}
+
+.content_wrapper{
+  z-index: 0;
+}
+
+.flip_btn{
+  position: absolute;
+  top: 73%;
+  left: 45%;
+}
+
+.copy_btn{
+  position: absolute;
+  top: 73%;
+  left: 60%;
+}
+
+.reset_btn{
+  position: absolute;
+  top: 73%;
+  left: 30%;
+}
+
+.button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.rope{
+   background: transparent;
+}
+
+.lights{
+  border-radius: 50%;
+  background-color: #f00;
+  width: 20px;
+  height: 20px;
+  animation-name: colorful;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorful{
+  0%   {background-color: rgb(255, 162, 0); box-shadow: 1px 1px 20px 8px rgb(233, 107, 90);}
+  25%  {background-color: yellow; box-shadow: 1px 1px 20px 8px rgb(234, 234, 121);}
+  50%  {background-color: rgb(0, 213, 255); box-shadow: 1px 1px 20px 8px rgb(76, 108, 189);}
+  75%  {background-color: rgb(243, 17, 243); box-shadow: 1px 1px 20px 8px rgb(227, 93, 198);}
+  100% {background-color: rgb(14, 239, 14); box-shadow: 1px 1px 20px 8px rgb(143, 224, 116);}
+}
+
+.lights_group{
+  display: flex;
+}
+
+.light1{
+  position: absolute;
+  top: 33px;
+  left: 47px;
+}
+
+.light2{
+  position: absolute;
+  top: 73px;
+  left: 126px;
+}
+
+.light3{
+  position: absolute;
+  top: 110px;
+  left: 205px;
+}
+
+.light4{
+  position: absolute;
+  top: 146px;
+  left: 284px;
+}
+
+.light5{
+  position: absolute;
+  top: 175px;
+  left: 363px;
+}
+
+.light6{
+  position: absolute;
+  top: 200px;
+  left: 442px;
+}
+
+.light7{
+  position: absolute;
+  top: 223px;
+  left: 521px;
+}
+
+.light8{
+  position: absolute;
+  top: 242px;
+  left: 600px;
+}
+
+.light9{
+  position: absolute;
+  top: 254px;
+  left: 680px;
+}
+
+.light10{
+  position: absolute;
+  top: 265px;
+  left: 758px;
+}
+
+.light11{
+  position: absolute;
+  top: 271px;
+  left: 850px;
+}
+
+.light12{
+  position: absolute;
+  top: 275px;
+  left: 954px;
+}
+
+.light13{
+  position: absolute;
+  top: 270px;
+  right: 830px;
+}
+
+.light14{
+  position: absolute;
+  top: 262px;
+  right: 730px;
+}
+.light15{
+  position: absolute;
+  top: 250px;
+  right: 630px;
+}
+.light16{
+  position: absolute;
+  top: 228px;
+  right: 530px;
+}
+.light17{
+  position: absolute;
+  top: 204px;
+  right: 430px;
+}
+.light18{
+  position: absolute;
+  top: 175px;
+  right: 330px;
+}
+.light19{
+  position: absolute;
+  top: 134px;
+  right: 230px;
+}
+.light20{
+  position: absolute;
+  top: 104px;
+  right: 160px;
+}
+.light21{
+  position: absolute;
+  top: 77px;
+  right: 100px;
+}
+.light22{
+  position: absolute;
+  top: 39px;
+  right: 32px;
+}
+
+.buttons{
+  display: flex;
+}

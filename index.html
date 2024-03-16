@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper || Simple</title>
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <svg class="rope" viewBox="0 0 100 15" width="100%">
+        <path d="M1,1 Q50,28 100,1" fill="none" stroke="black" stroke-width="0.2"/>
+    </svg>
+    <div class="lights_group">
+        <div class="lights light1"></div>
+        <div class="lights light2"></div>
+        <div class="lights light3"></div>
+        <div class="lights light4"></div>
+        <div class="lights light5"></div>
+        <div class="lights light6"></div>
+        <div class="lights light7"></div>
+        <div class="lights light8"></div>
+        <div class="lights light9"></div>
+        <div class="lights light10"></div>
+        <div class="lights light11"></div>
+        <div class="lights light12"></div>
+        <div class="lights light13"></div>
+        <div class="lights light14"></div>
+        <div class="lights light15"></div>
+        <div class="lights light16"></div>
+        <div class="lights light17"></div>
+        <div class="lights light18"></div>
+        <div class="lights light19"></div>
+        <div class="lights light20"></div>
+        <div class="lights light21"></div>
+        <div class="lights light22"></div>
+    </div>
+    <nav>
+        <nav class="nav-center">
+            <h4 class="header-colorFlipper">
+                Color Visualizer
+            </h4>
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html" class="underbar">Simple</a>
+                </li>
+                <li>
+                    <a href="hex.html" class="underbar">Hex</a>
+                </li>
+            </ul>
+        </nav>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="content_wrapper">
+                <div class="color_details">
+                    <h2>
+                        Color Name: 
+                        <span class="color">
+                            Ghost White
+                        </span>
+                    </h2>
+                    <h2>
+                        Color Code: 
+                        <span class="color">
+                            #f1f5f8
+                        </span>
+                    </h2>
+                    <h2>
+                        RGB: 
+                        <span class="color">
+                            (241,245,248)
+                        </span>
+                    </h2>
+                </div>
+                <div class="buttons">
+                    <button class="button flip_btn" id="flip_btn">
+                        Flip Color
+                    </button>
+                    <button class="button reset_btn" id="reset_btn">
+                        Restart
+                    </button>
+                    <button class="button copy_btn" id="copy_btn">
+                        Copy Color
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- javascript -->
+    <script src="app.js"></script>
+</body>
+</html>
